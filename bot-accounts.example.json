@@ -5,10 +5,10 @@
       "accountId": "discord-main",
       "platform": "discord",
       "enabled": true,
-      "personaId": "luna",
+      "personaId": "atra",
       "tokenEnv": "DISCORD_TOKEN",
       "clientIdEnv": "DISCORD_CLIENT_ID",
-      "displayName": "RPG Bot (Discord)"
+      "displayName": "Atra Alicia"
     },
     {
       "accountId": "telegram-main",
@@ -16,15 +16,15 @@
       "enabled": true,
       "personaId": "kai",
       "tokenEnv": "TELEGRAM_TOKEN",
-      "displayName": "RPG Bot (Telegram)"
+      "displayName": "Kai"
     },
     {
       "accountId": "whatsapp-main",
       "platform": "whatsapp",
       "enabled": false,
-      "personaId": "mira",
+      "personaId": "raina",
       "authDir": "data/wa_auth/whatsapp-main",
-      "displayName": "RPG Bot (WhatsApp)"
+      "displayName": "Rainara Aurelia"
     }
   ]
 }
