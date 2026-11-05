@@ -1,0 +1,25 @@
+services:
+  rpg-multibot:
+    build: .
+    image: rpg-multibot:latest
+    container_name: rpg-multibot
+    restart: unless-stopped # docker-level resilience; PM2 cron_restart is used when running bare-metal
+    env_file:
+      - .env
+    volumes:
+      # ALL runtime state survives container restarts/recreates:
+      # SQLite DB (WAL), WhatsApp auth sessions, backups, caches.
+      - ./data:/app/data
+    ports:
+      - "8787:8787" # health server
+    environment:
+      - NODE_ENV=production
+      - TZ=UTC
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8787/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    # graceful shutdown gets 30s to flush activity buffer + AI writes + WAL checkpoint
+    stop_grace_period: 30s

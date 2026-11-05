@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Secrets & local config
+.env
+.env.*
+!.env.example
+bot-accounts.json
+
+# Runtime data (everything under data/ is gitignored except .gitkeep files)
+data/db/*
+data/backups/*
+data/cache/images/*
+data/cache/previews/*
+data/wa_auth/*
+data/locks/*
+data/logs/*
+!data/**/.gitkeep
+
+# Build output
+dist/
+coverage/
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+npm-debug.log*

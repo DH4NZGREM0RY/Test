@@ -1,0 +1,12 @@
+node_modules
+dist
+data
+coverage
+.git
+.env
+.env.*
+bot-accounts.json
+*.log
+Dockerfile
+docker-compose.yml
+ecosystem.config.cjs

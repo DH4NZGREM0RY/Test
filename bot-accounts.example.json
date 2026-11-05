@@ -1,0 +1,30 @@
+{
+  "$comment": "Copy this file to bot-accounts.json (gitignored). One entry per bot account, across all platforms. Each enabled account is started as its own adapter instance and has exactly one default persona (admins can override per chat with `admin persona-assign`).",
+  "accounts": [
+    {
+      "accountId": "discord-main",
+      "platform": "discord",
+      "enabled": true,
+      "personaId": "luna",
+      "tokenEnv": "DISCORD_TOKEN",
+      "clientIdEnv": "DISCORD_CLIENT_ID",
+      "displayName": "RPG Bot (Discord)"
+    },
+    {
+      "accountId": "telegram-main",
+      "platform": "telegram",
+      "enabled": true,
+      "personaId": "kai",
+      "tokenEnv": "TELEGRAM_TOKEN",
+      "displayName": "RPG Bot (Telegram)"
+    },
+    {
+      "accountId": "whatsapp-main",
+      "platform": "whatsapp",
+      "enabled": false,
+      "personaId": "mira",
+      "authDir": "data/wa_auth/whatsapp-main",
+      "displayName": "RPG Bot (WhatsApp)"
+    }
+  ]
+}
